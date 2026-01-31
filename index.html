@@ -1,242 +1,1999 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoltDevices — Quality Refurbished Phones</title>
-    <meta name="description" content="Premium refurbished iPhones and Samsung devices. Tested, verified, and ready to activate. Shop with confidence.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; }
-        
-        /* Header */
-        header { background: #000; color: #fff; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
-        .logo span { color: #f59e0b; }
-        nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 0.95rem; transition: color 0.2s; }
-        nav a:hover { color: #fff; }
-        
-        /* Hero */
-        .hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #fff; padding: 80px 0; text-align: center; }
-        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -1px; }
-        .hero p { font-size: 1.2rem; color: #aaa; max-width: 600px; margin: 0 auto 30px; }
-        .badge-row { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
-        .badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 16px 24px; text-align: center; }
-        .badge .icon { font-size: 1.5rem; margin-bottom: 6px; }
-        .badge .label { font-size: 0.85rem; color: #ccc; }
-        
-        /* Products */
-        .products { padding: 60px 0; }
-        .products h2 { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
-        .card { border: 1px solid #e5e5e5; border-radius: 16px; overflow: hidden; transition: box-shadow 0.3s, transform 0.2s; }
-        .card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.1); transform: translateY(-4px); }
-        .card-img { width: 100%; height: 320px; object-fit: cover; background: #f5f5f5; }
-        .card-body { padding: 20px; }
-        .card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
-        .card-specs { font-size: 0.85rem; color: #666; margin-bottom: 12px; }
-        .card-price { font-size: 1.4rem; font-weight: 800; color: #000; }
-        .card-condition { display: inline-block; background: #ecfdf5; color: #059669; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-left: 8px; }
-        .card-features { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
-        .feature-tag { font-size: 0.75rem; background: #f3f4f6; color: #374151; padding: 4px 10px; border-radius: 20px; }
-        .cta-btn { display: inline-block; background: #000; color: #fff; padding: 12px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 16px; transition: background 0.2s; }
-        .cta-btn:hover { background: #333; }
-        
-        /* Trust */
-        .trust { background: #f9fafb; padding: 60px 0; text-align: center; }
-        .trust h2 { font-size: 2rem; font-weight: 700; margin-bottom: 40px; }
-        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
-        .trust-item { padding: 24px; }
-        .trust-item .icon { font-size: 2.5rem; margin-bottom: 12px; }
-        .trust-item h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-        .trust-item p { font-size: 0.9rem; color: #666; line-height: 1.6; }
-        
-        /* Contact */
-        .contact { padding: 60px 0; text-align: center; }
-        .contact h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
-        .contact p { color: #666; margin-bottom: 24px; }
-        .contact-methods { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .contact-btn { display: inline-flex; align-items: center; gap: 8px; background: #000; color: #fff; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
-        .contact-btn:hover { background: #333; }
-        .contact-btn.secondary { background: #f3f4f6; color: #000; }
-        .contact-btn.secondary:hover { background: #e5e7eb; }
-        
-        /* Footer */
-        footer { background: #000; color: #888; padding: 30px 0; text-align: center; font-size: 0.85rem; }
-        footer a { color: #aaa; text-decoration: none; }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .header-content { flex-direction: column; gap: 12px; }
-            nav a { margin-left: 16px; }
-            .grid { grid-template-columns: 1fr; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoltDevices — Premium Refurbished Phones</title>
+<meta name="description" content="Premium refurbished iPhones at honest prices. Every device inspected, unlocked, and IMEI verified. Shop with confidence.">
+<meta property="og:title" content="VoltDevices — Premium Phones. Honest Prices.">
+<meta property="og:description" content="Wholesale-sourced, individually inspected refurbished iPhones. Clean IMEI, fully unlocked, battery tested. 3-day returns.">
+<meta property="og:image" content="photos/iphone-front-dark.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET & BASE ─── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0a0a;
+  color: #e5e5e5;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ─── UTILITY ─── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.amber { color: #f59e0b; }
+.text-white { color: #ffffff; }
+.icon-svg { width: 20px; height: 20px; stroke: #f59e0b; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.icon-svg-sm { width: 16px; height: 16px; }
+.icon-svg-lg { width: 24px; height: 24px; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .6; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-16px) rotate(0deg); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(245,158,11,0.0); }
+  50% { box-shadow: 0 0 40px rgba(245,158,11,0.15); }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 24px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+}
+.nav.scrolled {
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(245,158,11,0.1);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.logo .bolt { margin-right: 6px; }
+.logo .bolt svg { width: 22px; height: 22px; fill: #f59e0b; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #a3a3a3;
+  transition: color 0.3s;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f59e0b;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-links a:hover { color: #ffffff; }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  background: #f59e0b;
+  color: #0a0a0a;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s;
+}
+.nav-cta:hover {
+  background: #fbbf24;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(245,158,11,0.4);
+}
+.nav-cta::after { display: none !important; }
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+.mobile-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #e5e5e5;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,0.98);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e5e5e5;
+  transition: color 0.3s;
+}
+.mobile-menu a:hover { color: #f59e0b; }
+.mobile-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 2rem;
+  color: #e5e5e5;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .mobile-toggle { display: flex; }
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 120px 0 80px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(245,158,11,0.06) 0%, transparent 60%),
+              radial-gradient(ellipse at 30% 20%, rgba(245,158,11,0.03) 0%, transparent 50%);
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.95) 100%);
+  z-index: 1;
+}
+.hero-phone-bg {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  max-width: 550px;
+  opacity: 0.12;
+  filter: blur(1px);
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-text { animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.2);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #f59e0b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 28px;
+}
+.hero-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.hero h1 .line2 {
+  color: #f59e0b;
+  display: block;
+}
+.hero-sub {
+  font-size: 1.15rem;
+  color: #a3a3a3;
+  max-width: 480px;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f59e0b;
+  color: #0a0a0a;
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+.btn-primary:hover {
+  background: #fbbf24;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(245,158,11,0.4);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #e5e5e5;
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(245,158,11,0.3);
+  transform: translateY(-2px);
+}
+.hero-trust { display: flex; gap: 32px; flex-wrap: wrap; }
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #a3a3a3;
+}
+.trust-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.trust-icon svg { width: 18px; height: 18px; stroke: #f59e0b; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+.hero-phone-float {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 24px;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 20px 60px rgba(245,158,11,0.15)) drop-shadow(0 4px 20px rgba(0,0,0,0.5));
+}
+
+@media (max-width: 968px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-trust { justify-content: center; }
+  .hero-visual { order: -1; }
+  .hero-phone-float { width: 220px; }
+  .hero-phone-bg { display: none; }
+}
+@media (max-width: 480px) {
+  .hero-trust { gap: 16px; }
+  .trust-item { font-size: 0.78rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+}
+
+/* ─── SECTION SHARED ─── */
+.section { padding: 100px 0; position: relative; }
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f59e0b;
+  margin-bottom: 16px;
+}
+.section-label .line {
+  width: 32px;
+  height: 2px;
+  background: #f59e0b;
+  border-radius: 2px;
+}
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+.section-desc {
+  font-size: 1.05rem;
+  color: #737373;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ─── DEVICES ─── */
+#devices { background: #0a0a0a; }
+.devices-header { text-align: center; margin-bottom: 60px; }
+.devices-header .section-desc { margin-left: auto; margin-right: auto; }
+.devices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+.device-card {
+  background: linear-gradient(145deg, #141414, #111111);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.device-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(145deg, rgba(245,158,11,0), rgba(245,158,11,0));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: background 0.4s;
+  z-index: 1;
+  pointer-events: none;
+}
+.device-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(245,158,11,0.08), 0 0 0 1px rgba(245,158,11,0.15);
+}
+.device-card:hover::before {
+  background: linear-gradient(145deg, rgba(245,158,11,0.4), rgba(245,158,11,0.1));
+}
+.device-gallery {
+  position: relative;
+  aspect-ratio: 1/1;
+  background: #0d0d0d;
+  overflow: hidden;
+  cursor: pointer;
+}
+.device-gallery img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.device-gallery img.active { opacity: 1; }
+.gallery-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+.gallery-dot.active {
+  background: #f59e0b;
+  width: 24px;
+  border-radius: 4px;
+}
+.condition-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.badge-excellent {
+  background: rgba(34,197,94,0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34,197,94,0.25);
+}
+.badge-good {
+  background: rgba(59,130,246,0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59,130,246,0.25);
+}
+.badge-new {
+  background: rgba(245,158,11,0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245,158,11,0.3);
+}
+.device-info { padding: 24px; }
+.device-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+.device-specs {
+  font-size: 0.85rem;
+  color: #737373;
+  margin-bottom: 16px;
+}
+.device-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.device-tag {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.05);
+  color: #a3a3a3;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.device-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.device-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+.device-price .currency {
+  font-size: 0.9rem;
+  color: #f59e0b;
+  font-weight: 600;
+}
+.btn-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f59e0b;
+  border: none;
+  color: #0a0a0a;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.btn-buy:hover {
+  background: #fbbf24;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(245,158,11,0.3);
+}
+.btn-buy svg { width: 14px; height: 14px; stroke: #0a0a0a; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ─── CHECKOUT MODAL ─── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.open {
+  display: flex;
+  opacity: 1;
+}
+.modal {
+  background: #141414;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-overlay.open .modal {
+  transform: translateY(0);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px 0;
+}
+.modal-header h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+.modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a3a3a3;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modal-close:hover {
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;
+}
+.modal-device-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.modal-device-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #0d0d0d;
+}
+.modal-device-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+.modal-device-info p {
+  font-size: 0.82rem;
+  color: #737373;
+}
+.modal-device-price {
+  margin-left: auto;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #f59e0b;
+}
+.modal-body { padding: 24px 32px 32px; }
+.form-group { margin-bottom: 18px; }
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.form-input:focus {
+  border-color: rgba(245,158,11,0.5);
+  box-shadow: 0 0 0 3px rgba(245,158,11,0.08);
+}
+.form-input::placeholder { color: #525252; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.payment-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #a3a3a3;
+}
+.payment-option:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+}
+.payment-option.selected {
+  background: rgba(245,158,11,0.08);
+  border-color: rgba(245,158,11,0.4);
+  color: #ffffff;
+}
+.payment-option input { display: none; }
+.payment-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.payment-option.selected .payment-radio {
+  border-color: #f59e0b;
+}
+.payment-option.selected .payment-radio::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+.btn-checkout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f59e0b;
+  color: #0a0a0a;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.btn-checkout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+.btn-checkout:hover {
+  background: #fbbf24;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(245,158,11,0.35);
+}
+.modal-secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 0.75rem;
+  color: #525252;
+}
+.modal-secure svg { width: 14px; height: 14px; stroke: #525252; fill: none; stroke-width: 2; }
+
+/* Success state */
+.checkout-success {
+  display: none;
+  text-align: center;
+  padding: 48px 32px;
+}
+.checkout-success.show { display: block; }
+.checkout-form.hidden { display: none; }
+.success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.1);
+  border: 2px solid rgba(34,197,94,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.success-icon svg { width: 32px; height: 32px; stroke: #4ade80; fill: none; stroke-width: 2.5; }
+.checkout-success h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.checkout-success p {
+  font-size: 0.92rem;
+  color: #a3a3a3;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.btn-whatsapp-confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-whatsapp-confirm:hover {
+  background: #22c55e;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(37,211,102,0.3);
+}
+
+@media (max-width: 520px) {
+  .modal { border-radius: 20px; }
+  .modal-header, .modal-body { padding-left: 20px; padding-right: 20px; }
+  .modal-device-summary { padding-left: 20px; padding-right: 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .payment-options { grid-template-columns: 1fr; }
+}
+
+/* ─── INVENTORY SHOWCASE ─── */
+.showcase {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showcase-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('photos/warehouse-collage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  will-change: transform;
+}
+.showcase-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    rgba(10,10,10,0.85) 0%, 
+    rgba(10,10,10,0.7) 40%, 
+    rgba(10,10,10,0.7) 60%, 
+    rgba(10,10,10,0.9) 100%);
+}
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 80px 24px;
+}
+.showcase-number {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  color: #f59e0b;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 8px;
+}
+.showcase-title {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.showcase-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.showcase-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.showcase-stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+.showcase-stat-label {
+  font-size: 0.8rem;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+.showcase-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+  margin: 28px auto;
+  border-radius: 3px;
+}
+.showcase-sub {
+  font-size: 1rem;
+  color: #a3a3a3;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .showcase-bg { background-attachment: scroll; }
+}
+
+/* ─── WHY US ─── */
+#why { background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%); }
+.why-header { text-align: center; margin-bottom: 60px; }
+.why-header .section-desc { margin: 0 auto; }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.why-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 36px 28px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.why-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.why-card:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(245,158,11,0.15);
+  transform: translateY(-4px);
+}
+.why-card:hover::after { opacity: 1; }
+.why-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(245,158,11,0.08);
+  border: 1px solid rgba(245,158,11,0.12);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.why-icon svg { width: 24px; height: 24px; stroke: #f59e0b; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.why-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.why-card p {
+  font-size: 0.88rem;
+  color: #737373;
+  line-height: 1.65;
+}
+
+/* ─── HOW IT WORKS ─── */
+#how { background: #0a0a0a; }
+.how-header { text-align: center; margin-bottom: 72px; }
+.how-header .section-desc { margin: 0 auto; }
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.how-steps::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 16%;
+  right: 16%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(245,158,11,0.3), rgba(245,158,11,0.1), rgba(245,158,11,0.3));
+  z-index: 0;
+}
+.how-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.step-num {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(245,158,11,0.05));
+  border: 2px solid rgba(245,158,11,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  position: relative;
+}
+.step-num svg { width: 28px; height: 28px; stroke: #f59e0b; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.step-num::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(245,158,11,0.1);
+}
+.how-step h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.how-step p {
+  font-size: 0.88rem;
+  color: #737373;
+  max-width: 260px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+@media (max-width: 768px) {
+  .how-steps { grid-template-columns: 1fr; gap: 48px; }
+  .how-steps::before { display: none; }
+}
+
+/* ─── CONTACT ─── */
+#contact {
+  background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+}
+.contact-wrapper {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.contact-wrapper .section-desc { margin: 0 auto 48px; }
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 20px 24px;
+  transition: all 0.3s;
+  text-align: left;
+}
+.contact-card:hover {
+  background: rgba(245,158,11,0.05);
+  border-color: rgba(245,158,11,0.2);
+  transform: translateY(-2px);
+}
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-icon svg { width: 24px; height: 24px; }
+.contact-icon.wa { background: rgba(37,211,102,0.12); }
+.contact-icon.wa svg { fill: #25d366; stroke: none; }
+.contact-icon.fb { background: rgba(66,103,178,0.12); }
+.contact-icon.fb svg { fill: #4267B2; stroke: none; }
+.contact-icon.sw { background: rgba(245,87,52,0.12); }
+.contact-icon.sw svg { stroke: #f55734; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.contact-icon.em { background: rgba(245,158,11,0.12); }
+.contact-icon.em svg { stroke: #f59e0b; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.contact-icon.tw { background: rgba(255,255,255,0.08); }
+.contact-icon.tw svg { fill: #ffffff; stroke: none; }
+.contact-icon.li { background: rgba(10,102,194,0.12); }
+.contact-icon.li svg { stroke: #0a66c2; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.contact-label {
+  font-size: 0.75rem;
+  color: #737373;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.contact-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e5e5e5;
+}
+.contact-cta-box {
+  background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(245,158,11,0.02));
+  border: 1px solid rgba(245,158,11,0.15);
+  border-radius: 20px;
+  padding: 40px 36px;
+}
+.contact-cta-box h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.contact-cta-box p {
+  font-size: 0.92rem;
+  color: #a3a3a3;
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: #ffffff;
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.btn-wa:hover {
+  background: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(37,211,102,0.3);
+}
+@media (max-width: 840px) {
+  .contact-channels { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .contact-channels { grid-template-columns: 1fr; }
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 40px 0;
+  text-align: center;
+}
+.footer-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.footer-logo svg { width: 20px; height: 20px; fill: #f59e0b; }
+.footer p {
+  font-size: 0.82rem;
+  color: #525252;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+.footer-links a {
+  font-size: 0.82rem;
+  color: #525252;
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: #f59e0b; }
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #404040; }
+
+/* ─── SELECTION ─── */
+::selection { background: rgba(245,158,11,0.3); color: #ffffff; }
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Volt<span>Devices</span></div>
-                <nav>
-                    <a href="#devices">Devices</a>
-                    <a href="#why-us">Why Us</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
+
+<!-- SVG icon definitions (hidden) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- Lightning bolt -->
+  <symbol id="icon-bolt" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor" stroke="none"/></symbol>
+  <!-- Shield check -->
+  <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <!-- Unlock -->
+  <symbol id="icon-unlock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 019.9-1"/></symbol>
+  <!-- Battery -->
+  <symbol id="icon-battery" viewBox="0 0 24 24"><rect x="1" y="6" width="18" height="12" rx="2" ry="2"/><line x1="23" y1="13" x2="23" y2="11"/><rect x="3" y="8" width="10" height="8" rx="1" fill="currentColor" stroke="none" opacity="0.3"/></symbol>
+  <!-- Truck -->
+  <symbol id="icon-truck" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+  <!-- Clipboard check -->
+  <symbol id="icon-clipboard" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></symbol>
+  <!-- Camera -->
+  <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <!-- Refresh / Return -->
+  <symbol id="icon-return" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></symbol>
+  <!-- Twitter/X -->
+  <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor" stroke="none"/></symbol>
+  <!-- LinkedIn -->
+  <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <!-- Search -->
+  <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  <!-- Message -->
+  <symbol id="icon-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></symbol>
+  <!-- Package -->
+  <symbol id="icon-package" viewBox="0 0 24 24"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></symbol>
+  <!-- Mail -->
+  <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+  <!-- Arrow right -->
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <!-- Check -->
+  <symbol id="icon-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <!-- Lock -->
+  <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></symbol>
+  <!-- Shopping bag -->
+  <symbol id="icon-bag" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></symbol>
+</svg>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="bolt"><svg><use href="#icon-bolt"/></svg></span><span class="text-white">Volt</span><span class="amber">Devices</span>
+    </a>
+    <div class="nav-links">
+      <a href="#devices">Devices</a>
+      <a href="#why">Why Us</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu">&#x2715;</button>
+  <a href="#devices" onclick="this.parentElement.classList.remove('open')">Devices</a>
+  <a href="#why" onclick="this.parentElement.classList.remove('open')">Why Us</a>
+  <a href="#how" onclick="this.parentElement.classList.remove('open')">How It Works</a>
+  <a href="#contact" onclick="this.parentElement.classList.remove('open')">Contact</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="photos/iphone-front-dark.jpg" alt="" class="hero-phone-bg" loading="eager">
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Devices Available Now
+      </div>
+      <h1>
+        Premium Phones.
+        <span class="line2">Honest Prices.</span>
+      </h1>
+      <p class="hero-sub">
+        Wholesale-sourced, individually inspected iPhones — unlocked, verified, and ready to ship. Every device photographed, every IMEI checked.
+      </p>
+      <div class="hero-actions">
+        <a href="#devices" class="btn-primary">
+          <span>Browse Devices</span>
+          <svg style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#icon-arrow"/></svg>
+        </a>
+        <a href="https://wa.me/19296679792" class="btn-secondary" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="trust-icon"><svg><use href="#icon-shield"/></svg></div>
+          <span>IMEI Verified</span>
         </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Premium Phones. Honest Prices.</h1>
-            <p>Refurbished iPhones and Samsung devices — fully tested, IMEI verified, and ready to activate on any carrier.</p>
-            <div class="badge-row">
-                <div class="badge">
-                    <div class="icon">✅</div>
-                    <div class="label">IMEI Verified</div>
-                </div>
-                <div class="badge">
-                    <div class="icon">🔓</div>
-                    <div class="label">Fully Unlocked</div>
-                </div>
-                <div class="badge">
-                    <div class="icon">🔋</div>
-                    <div class="label">Battery Tested</div>
-                </div>
-                <div class="badge">
-                    <div class="icon">📦</div>
-                    <div class="label">Fast Shipping</div>
-                </div>
-            </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg><use href="#icon-unlock"/></svg></div>
+          <span>Fully Unlocked</span>
         </div>
-    </section>
-
-    <section class="products" id="devices">
-        <div class="container">
-            <h2>Available Now</h2>
-            <div class="grid">
-                <div class="card">
-                    <img class="card-img" src="photos/iphone15-128gb-black-back.jpg" alt="iPhone 15 128GB Black">
-                    <div class="card-body">
-                        <div class="card-title">iPhone 15</div>
-                        <div class="card-specs">128GB · Black · Unlocked</div>
-                        <div>
-                            <span class="card-price">$410</span>
-                            <span class="card-condition">Excellent</span>
-                        </div>
-                        <div class="card-features">
-                            <span class="feature-tag">✅ Clean IMEI</span>
-                            <span class="feature-tag">🔓 All Carriers</span>
-                            <span class="feature-tag">📸 Tested</span>
-                        </div>
-                        <a href="#contact" class="cta-btn">Inquire</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card-img" src="photos/iphone16e-128gb-black-box.jpg" alt="iPhone 16e 128GB Black - New in Box">
-                    <div class="card-body">
-                        <div class="card-title">iPhone 16e</div>
-                        <div class="card-specs">128GB · Black · NEW IN BOX</div>
-                        <div>
-                            <span class="card-price">$420</span>
-                            <span class="card-condition">Brand New</span>
-                        </div>
-                        <div class="card-features">
-                            <span class="feature-tag">📦 Sealed Box</span>
-                            <span class="feature-tag">🔓 All Carriers</span>
-                            <span class="feature-tag">🛡️ Apple Warranty</span>
-                        </div>
-                        <a href="#contact" class="cta-btn">Inquire</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card-img" src="photos/iphone14plus-128gb-blue-back.jpg" alt="iPhone 14 Plus 128GB Blue">
-                    <div class="card-body">
-                        <div class="card-title">iPhone 14 Plus</div>
-                        <div class="card-specs">128GB · Blue · Unlocked</div>
-                        <div>
-                            <span class="card-price">$320</span>
-                            <span class="card-condition">Good</span>
-                        </div>
-                        <div class="card-features">
-                            <span class="feature-tag">🔋 84% Battery</span>
-                            <span class="feature-tag">🔓 All Carriers</span>
-                            <span class="feature-tag">📸 Tested</span>
-                        </div>
-                        <a href="#contact" class="cta-btn">Inquire</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card-img" src="photos/iphone12pro-box.jpg" alt="iPhone 12 Pro">
-                    <div class="card-body">
-                        <div class="card-title">iPhone 12 Pro</div>
-                        <div class="card-specs">Unlocked · Boxed</div>
-                        <div>
-                            <span class="card-price">$265</span>
-                            <span class="card-condition">Excellent</span>
-                        </div>
-                        <div class="card-features">
-                            <span class="feature-tag">✅ Clean IMEI</span>
-                            <span class="feature-tag">🔓 All Carriers</span>
-                            <span class="feature-tag">📦 With Box</span>
-                        </div>
-                        <a href="#contact" class="cta-btn">Inquire</a>
-                    </div>
-                </div>
-            </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg><use href="#icon-battery"/></svg></div>
+          <span>Battery Tested</span>
         </div>
-    </section>
-
-    <section class="trust" id="why-us">
-        <div class="container">
-            <h2>Why Buy From Us</h2>
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="icon">🔍</div>
-                    <h3>Every Device Inspected</h3>
-                    <p>Screen, cameras, speakers, buttons, charging port, Face ID — we test everything before listing.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">🔓</div>
-                    <h3>Unlocked & Clean</h3>
-                    <p>All devices are carrier-unlocked with clean IMEI. No activation locks, no surprises.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">📸</div>
-                    <h3>Real Photos</h3>
-                    <p>What you see is what you get. Every listing shows the actual device you'll receive.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">🤝</div>
-                    <h3>3-Day Returns</h3>
-                    <p>Not satisfied? Return within 3 days for a full refund. We stand behind every sale.</p>
-                </div>
-            </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg><use href="#icon-truck"/></svg></div>
+          <span>Fast Shipping</span>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="photos/iphone-front-dark.jpg" alt="iPhone 15 Pro Black Titanium" class="hero-phone-float" loading="eager" width="320" height="640">
+    </div>
+  </div>
+</section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Ready to Buy?</h2>
-            <p>DM us or reach out through any of these channels. Fast replies guaranteed.</p>
-            <div class="contact-methods">
-                <a href="https://facebook.com/marketplace" class="contact-btn">📱 Facebook Marketplace</a>
-                <a href="https://swappa.com" class="contact-btn secondary">💻 Swappa Store</a>
-                <a href="mailto:maxgooose@gmail.com" class="contact-btn secondary">📧 Email Us</a>
-            </div>
-        </div>
-    </section>
+<!-- ═══════════ DEVICES ═══════════ -->
+<section class="section" id="devices">
+  <div class="container">
+    <div class="devices-header reveal">
+      <div class="section-label"><span class="line"></span> Featured Devices</div>
+      <h2 class="section-title">What's Available</h2>
+      <p class="section-desc">Hand-picked devices, real photos. Tap any image to see more angles.</p>
+    </div>
+    <div class="devices-grid">
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 VoltDevices. All rights reserved.</p>
+      <!-- iPhone 15 -->
+      <div class="device-card reveal reveal-delay-1">
+        <div class="device-gallery" onclick="cycleGallery(this)">
+          <span class="condition-badge badge-excellent">Excellent</span>
+          <img src="photos/iphone15-128gb-black-front.jpg" alt="iPhone 15 Black Front" class="active" loading="lazy">
+          <img src="photos/iphone15-128gb-black-back.jpg" alt="iPhone 15 Black Back" loading="lazy">
+          <img src="photos/iphone15-128gb-black-bottom.jpg" alt="iPhone 15 Black Bottom" loading="lazy">
+          <div class="gallery-dots">
+            <button class="gallery-dot active" aria-label="Photo 1"></button>
+            <button class="gallery-dot" aria-label="Photo 2"></button>
+            <button class="gallery-dot" aria-label="Photo 3"></button>
+          </div>
         </div>
-    </footer>
+        <div class="device-info">
+          <h3 class="device-name">iPhone 15</h3>
+          <p class="device-specs">128GB · Black · Unlocked</p>
+          <div class="device-tags">
+            <span class="device-tag">Clean IMEI</span>
+            <span class="device-tag">All Carriers</span>
+            <span class="device-tag">Inspected</span>
+          </div>
+          <div class="device-bottom">
+            <div class="device-price"><span class="currency">$</span>410</div>
+            <button class="btn-buy" onclick="openCheckout('iPhone 15', '128GB · Black · Unlocked', 410, 'photos/iphone15-128gb-black-front.jpg')">
+              Buy Now
+              <svg><use href="#icon-arrow"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 16e -->
+      <div class="device-card reveal reveal-delay-2">
+        <div class="device-gallery" onclick="cycleGallery(this)">
+          <span class="condition-badge badge-new">New in Box</span>
+          <img src="photos/iphone16e-128gb-black-box.jpg" alt="iPhone 16e Sealed Box" class="active" loading="lazy">
+          <div class="gallery-dots">
+            <button class="gallery-dot active" aria-label="Photo 1"></button>
+          </div>
+        </div>
+        <div class="device-info">
+          <h3 class="device-name">iPhone 16e</h3>
+          <p class="device-specs">128GB · Black · NEW IN BOX</p>
+          <div class="device-tags">
+            <span class="device-tag">Sealed</span>
+            <span class="device-tag">Apple Warranty</span>
+            <span class="device-tag">All Carriers</span>
+          </div>
+          <div class="device-bottom">
+            <div class="device-price"><span class="currency">$</span>420</div>
+            <button class="btn-buy" onclick="openCheckout('iPhone 16e', '128GB · Black · NEW IN BOX', 420, 'photos/iphone16e-128gb-black-box.jpg')">
+              Buy Now
+              <svg><use href="#icon-arrow"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 14 Plus -->
+      <div class="device-card reveal reveal-delay-3">
+        <div class="device-gallery" onclick="cycleGallery(this)">
+          <span class="condition-badge badge-good">Good</span>
+          <img src="photos/iphone14plus-128gb-blue-front.jpg" alt="iPhone 14 Plus Blue Front" class="active" loading="lazy">
+          <img src="photos/iphone14plus-128gb-blue-back.jpg" alt="iPhone 14 Plus Blue Back" loading="lazy">
+          <img src="photos/iphone14plus-128gb-blue-bottom.jpg" alt="iPhone 14 Plus Blue Bottom" loading="lazy">
+          <img src="photos/iphone14plus-second-back.jpg" alt="iPhone 14 Plus Second Unit" loading="lazy">
+          <div class="gallery-dots">
+            <button class="gallery-dot active" aria-label="Photo 1"></button>
+            <button class="gallery-dot" aria-label="Photo 2"></button>
+            <button class="gallery-dot" aria-label="Photo 3"></button>
+            <button class="gallery-dot" aria-label="Photo 4"></button>
+          </div>
+        </div>
+        <div class="device-info">
+          <h3 class="device-name">iPhone 14 Plus</h3>
+          <p class="device-specs">128GB · Blue · Unlocked</p>
+          <div class="device-tags">
+            <span class="device-tag">Clean IMEI</span>
+            <span class="device-tag">All Carriers</span>
+            <span class="device-tag">84% Battery</span>
+          </div>
+          <div class="device-bottom">
+            <div class="device-price"><span class="currency">$</span>320</div>
+            <button class="btn-buy" onclick="openCheckout('iPhone 14 Plus', '128GB · Blue · Unlocked', 320, 'photos/iphone14plus-128gb-blue-front.jpg')">
+              Buy Now
+              <svg><use href="#icon-arrow"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 Pro -->
+      <div class="device-card reveal reveal-delay-4">
+        <div class="device-gallery" onclick="cycleGallery(this)">
+          <span class="condition-badge badge-excellent">Excellent</span>
+          <img src="photos/iphone12pro-box.jpg" alt="iPhone 12 Pro Max Box" class="active" loading="lazy">
+          <div class="gallery-dots">
+            <button class="gallery-dot active" aria-label="Photo 1"></button>
+          </div>
+        </div>
+        <div class="device-info">
+          <h3 class="device-name">iPhone 12 Pro</h3>
+          <p class="device-specs">Unlocked · Boxed · Pacific Blue</p>
+          <div class="device-tags">
+            <span class="device-tag">Clean IMEI</span>
+            <span class="device-tag">All Carriers</span>
+            <span class="device-tag">Original Box</span>
+          </div>
+          <div class="device-bottom">
+            <div class="device-price"><span class="currency">$</span>265</div>
+            <button class="btn-buy" onclick="openCheckout('iPhone 12 Pro', 'Unlocked · Boxed · Pacific Blue', 265, 'photos/iphone12pro-box.jpg')">
+              Buy Now
+              <svg><use href="#icon-arrow"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ INVENTORY SHOWCASE ═══════════ -->
+<section class="showcase" id="inventory">
+  <div class="showcase-bg" id="showcaseBg"></div>
+  <div class="showcase-overlay"></div>
+  <div class="showcase-content reveal">
+    <div class="showcase-number">100+</div>
+    <div class="showcase-title">Devices in Stock</div>
+    <div class="showcase-stats">
+      <div class="showcase-stat">
+        <span class="showcase-stat-value">Wholesale</span>
+        <span class="showcase-stat-label">Sourced</span>
+      </div>
+      <div class="showcase-stat">
+        <span class="showcase-stat-value">Individually</span>
+        <span class="showcase-stat-label">Inspected</span>
+      </div>
+      <div class="showcase-stat">
+        <span class="showcase-stat-value">Real</span>
+        <span class="showcase-stat-label">Photos</span>
+      </div>
+    </div>
+    <div class="showcase-divider"></div>
+    <p class="showcase-sub">
+      We don't use stock images. Every device is photographed in our warehouse so you see exactly what you're getting — no surprises.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ WHY US ═══════════ -->
+<section class="section" id="why">
+  <div class="container">
+    <div class="why-header reveal">
+      <div class="section-label"><span class="line"></span> Why VoltDevices</div>
+      <h2 class="section-title">Buying Refurbished,<br>Done Right</h2>
+      <p class="section-desc">We're not a marketplace. We hand-pick, test, and photograph every single device ourselves.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon"><svg><use href="#icon-clipboard"/></svg></div>
+        <h3>Every Device Inspected</h3>
+        <p>Screen, cameras, speakers, buttons, charging port, Face ID — we test every function before listing. If it doesn't pass, it doesn't sell.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon"><svg><use href="#icon-unlock"/></svg></div>
+        <h3>Unlocked & Clean IMEI</h3>
+        <p>Every phone is verified through IMEI databases — no blacklists, no carrier locks, no stolen devices. Works with any carrier worldwide.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon"><svg><use href="#icon-camera"/></svg></div>
+        <h3>Real Photos Only</h3>
+        <p>What you see is what you get. Every listing uses our own photos taken in our warehouse — no stock images, no bait-and-switch.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-icon"><svg><use href="#icon-return"/></svg></div>
+        <h3>3-Day Returns</h3>
+        <p>Not happy? Send it back within 3 days for a full refund. No questions, no runaround. We stand behind every device we sell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ HOW IT WORKS ═══════════ -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="how-header reveal">
+      <div class="section-label"><span class="line"></span> How It Works</div>
+      <h2 class="section-title">Three Steps. That's It.</h2>
+      <p class="section-desc">No accounts, no bidding wars, no algorithms. Just straightforward buying.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step reveal reveal-delay-1">
+        <div class="step-num">
+          <svg><use href="#icon-search"/></svg>
+        </div>
+        <h3>Browse</h3>
+        <p>Check our current inventory above. Every listing has real photos, specs, and condition details.</p>
+      </div>
+      <div class="how-step reveal reveal-delay-2">
+        <div class="step-num">
+          <svg><use href="#icon-bag"/></svg>
+        </div>
+        <h3>Checkout</h3>
+        <p>Hit "Buy Now" on any device. Fill in your details and choose how you'd like to pay.</p>
+      </div>
+      <div class="how-step reveal reveal-delay-3">
+        <div class="step-num">
+          <svg><use href="#icon-package"/></svg>
+        </div>
+        <h3>Receive</h3>
+        <p>We ship fast with tracking. Your phone arrives inspected, cleaned, and ready to activate on any carrier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="reveal">
+        <div class="section-label"><span class="line"></span> Get in Touch</div>
+        <h2 class="section-title">Ready to Buy?</h2>
+        <p class="section-desc">Reach out through whichever platform you prefer. We typically respond within an hour.</p>
+      </div>
+
+      <div class="contact-channels reveal">
+        <a href="https://wa.me/19296679792" class="contact-card" target="_blank" rel="noopener">
+          <div class="contact-icon wa">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-value">Message Us</div>
+          </div>
+        </a>
+        <a href="https://facebook.com/marketplace" class="contact-card" target="_blank" rel="noopener">
+          <div class="contact-icon fb">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Facebook</div>
+            <div class="contact-value">Marketplace</div>
+          </div>
+        </a>
+        <a href="https://swappa.com" class="contact-card" target="_blank" rel="noopener">
+          <div class="contact-icon sw">
+            <svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Swappa</div>
+            <div class="contact-value">View Listings</div>
+          </div>
+        </a>
+        <a href="mailto:maxgooose@gmail.com" class="contact-card">
+          <div class="contact-icon em">
+            <svg><use href="#icon-mail"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">maxgooose@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://x.com/VoltDevices" class="contact-card" target="_blank" rel="noopener">
+          <div class="contact-icon tw">
+            <svg><use href="#icon-twitter"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Twitter / X</div>
+            <div class="contact-value">@VoltDevices</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/company/voltdevices" class="contact-card" target="_blank" rel="noopener">
+          <div class="contact-icon li">
+            <svg><use href="#icon-linkedin"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">VoltDevices</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-cta-box reveal">
+        <h3>Fastest Response? WhatsApp.</h3>
+        <p>Send us a message and we'll get back to you quickly — usually within the hour. Ask about a device, request more photos, or check availability.</p>
+        <a href="https://wa.me/19296679792?text=Hi!%20I'm%20interested%20in%20one%20of%20your%20devices." class="btn-wa" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          Open WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo">
+      <svg><use href="#icon-bolt"/></svg> <span class="text-white">Volt</span><span class="amber">Devices</span>
+    </div>
+    <p>&copy; 2026 VoltDevices. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#devices">Devices</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a href="https://x.com/VoltDevices" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://linkedin.com/company/voltdevices" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:maxgooose@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ CHECKOUT MODAL ═══════════ -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Checkout</h2>
+      <button class="modal-close" onclick="closeCheckout()">&#x2715;</button>
+    </div>
+    <div class="modal-device-summary">
+      <img class="modal-device-img" id="modalImg" src="" alt="Device">
+      <div class="modal-device-info">
+        <h3 id="modalName"></h3>
+        <p id="modalSpecs"></p>
+      </div>
+      <div class="modal-device-price" id="modalPrice"></div>
+    </div>
+
+    <!-- Checkout Form -->
+    <div class="modal-body checkout-form" id="checkoutForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="fname">First Name</label>
+          <input class="form-input" type="text" id="fname" placeholder="John" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lname">Last Name</label>
+          <input class="form-input" type="text" id="lname" placeholder="Doe" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" id="email" placeholder="john@example.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="phone">Phone</label>
+        <input class="form-input" type="tel" id="phone" placeholder="(555) 123-4567" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="address">Shipping Address</label>
+        <input class="form-input" type="text" id="address" placeholder="123 Main St, Apt 4B" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="city">City</label>
+          <input class="form-input" type="text" id="city" placeholder="New York" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="zip">ZIP Code</label>
+          <input class="form-input" type="text" id="zip" placeholder="10001" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Payment Method</label>
+        <div class="payment-options">
+          <label class="payment-option" onclick="selectPayment(this)">
+            <input type="radio" name="payment" value="zelle">
+            <span class="payment-radio"></span>
+            Zelle
+          </label>
+          <label class="payment-option" onclick="selectPayment(this)">
+            <input type="radio" name="payment" value="venmo">
+            <span class="payment-radio"></span>
+            Venmo
+          </label>
+          <label class="payment-option" onclick="selectPayment(this)">
+            <input type="radio" name="payment" value="cashapp">
+            <span class="payment-radio"></span>
+            Cash App
+          </label>
+          <label class="payment-option" onclick="selectPayment(this)">
+            <input type="radio" name="payment" value="applepay">
+            <span class="payment-radio"></span>
+            Apple Pay
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="notes">Notes (optional)</label>
+        <textarea class="form-input form-textarea" id="notes" placeholder="Any special requests..."></textarea>
+      </div>
+
+      <button class="btn-checkout" onclick="submitCheckout()">
+        Place Order
+        <svg style="width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><use href="#icon-arrow"/></svg>
+      </button>
+      <div class="modal-secure">
+        <svg><use href="#icon-lock"/></svg>
+        Payment details sent securely via WhatsApp
+      </div>
+    </div>
+
+    <!-- Success State -->
+    <div class="checkout-success" id="checkoutSuccess">
+      <div class="success-icon">
+        <svg><use href="#icon-check"/></svg>
+      </div>
+      <h3>Order Placed!</h3>
+      <p>We've received your order details. Tap the button below to confirm on WhatsApp — we'll send you payment info and shipping updates there.</p>
+      <a class="btn-whatsapp-confirm" id="whatsappConfirmLink" href="#" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        Confirm on WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script>
+// ── Nav scroll effect ──
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+// ── Intersection Observer for reveal animations ──
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -60px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── Gallery cycling ──
+function cycleGallery(gallery) {
+  const imgs = gallery.querySelectorAll('img');
+  const dots = gallery.querySelectorAll('.gallery-dot');
+  if (imgs.length <= 1) return;
+  
+  let current = -1;
+  imgs.forEach((img, i) => { if (img.classList.contains('active')) current = i; });
+  
+  const next = (current + 1) % imgs.length;
+  
+  imgs[current].classList.remove('active');
+  imgs[next].classList.add('active');
+  dots[current].classList.remove('active');
+  dots[next].classList.add('active');
+}
+
+// ── Parallax for showcase ──
+const showcaseBg = document.getElementById('showcaseBg');
+if (showcaseBg) {
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const rect = showcaseBg.parentElement.getBoundingClientRect();
+        const windowH = window.innerHeight;
+        if (rect.bottom > 0 && rect.top < windowH) {
+          const progress = (windowH - rect.top) / (windowH + rect.height);
+          const translate = (progress - 0.5) * 40;
+          const scale = 1.05 + progress * 0.03;
+          showcaseBg.style.transform = `scale(${scale}) translateY(${translate}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+}
+
+// ── Gallery dot clicks ──
+document.querySelectorAll('.gallery-dots').forEach(dotsContainer => {
+  dotsContainer.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const dot = e.target.closest('.gallery-dot');
+    if (!dot) return;
+    
+    const gallery = dotsContainer.closest('.device-gallery');
+    const imgs = gallery.querySelectorAll('img');
+    const dots = gallery.querySelectorAll('.gallery-dot');
+    const index = Array.from(dots).indexOf(dot);
+    
+    imgs.forEach(img => img.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    imgs[index].classList.add('active');
+    dots[index].classList.add('active');
+  });
+});
+
+// ── Smooth scroll for anchor links ──
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ── Checkout Modal ──
+let currentDevice = {};
+
+function openCheckout(name, specs, price, img) {
+  currentDevice = { name, specs, price, img };
+  document.getElementById('modalImg').src = img;
+  document.getElementById('modalName').textContent = name;
+  document.getElementById('modalSpecs').textContent = specs;
+  document.getElementById('modalPrice').textContent = '$' + price;
+  
+  // Reset form state
+  document.getElementById('checkoutForm').classList.remove('hidden');
+  document.getElementById('checkoutSuccess').classList.remove('show');
+  
+  // Reset payment selection
+  document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('selected'));
+  
+  const modal = document.getElementById('checkoutModal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCheckout() {
+  const modal = document.getElementById('checkoutModal');
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close on overlay click
+document.getElementById('checkoutModal').addEventListener('click', function(e) {
+  if (e.target === this) closeCheckout();
+});
+
+// Close on Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeCheckout();
+});
+
+function selectPayment(el) {
+  document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('selected'));
+  el.classList.add('selected');
+  el.querySelector('input').checked = true;
+}
+
+function submitCheckout() {
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const zip = document.getElementById('zip').value.trim();
+  const notes = document.getElementById('notes').value.trim();
+  const paymentEl = document.querySelector('input[name="payment"]:checked');
+  
+  // Basic validation
+  if (!fname || !lname || !email || !phone || !address || !city || !zip) {
+    // Highlight first empty required field
+    const fields = ['fname','lname','email','phone','address','city','zip'];
+    for (const f of fields) {
+      const el = document.getElementById(f);
+      if (!el.value.trim()) {
+        el.focus();
+        el.style.borderColor = 'rgba(239,68,68,0.6)';
+        setTimeout(() => { el.style.borderColor = ''; }, 2000);
+        break;
+      }
+    }
+    return;
+  }
+  if (!paymentEl) {
+    document.querySelector('.payment-options').style.outline = '2px solid rgba(239,68,68,0.5)';
+    document.querySelector('.payment-options').style.borderRadius = '14px';
+    setTimeout(() => { document.querySelector('.payment-options').style.outline = ''; }, 2000);
+    return;
+  }
+  
+  const payment = paymentEl.value;
+  const paymentLabels = { zelle: 'Zelle', venmo: 'Venmo', cashapp: 'Cash App', applepay: 'Apple Pay' };
+  
+  // Build WhatsApp message
+  const msg = `ORDER REQUEST — VoltDevices
+
+Device: ${currentDevice.name}
+Specs: ${currentDevice.specs}
+Price: $${currentDevice.price}
+
+Name: ${fname} ${lname}
+Email: ${email}
+Phone: ${phone}
+Ship to: ${address}, ${city} ${zip}
+Payment: ${paymentLabels[payment]}${notes ? '\nNotes: ' + notes : ''}`;
+
+  const waLink = 'https://wa.me/19296679792?text=' + encodeURIComponent(msg);
+  document.getElementById('whatsappConfirmLink').href = waLink;
+  
+  // Show success
+  document.getElementById('checkoutForm').classList.add('hidden');
+  document.getElementById('checkoutSuccess').classList.add('show');
+}
+</script>
 </body>
 </html>
