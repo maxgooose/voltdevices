@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltDevices — Quality Refurbished Phones</title>
+    <meta name="description" content="Premium refurbished iPhones and Samsung devices. Tested, verified, and ready to activate. Shop with confidence.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; }
+        
+        /* Header */
+        header { background: #000; color: #fff; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
+        .logo span { color: #f59e0b; }
+        nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 0.95rem; transition: color 0.2s; }
+        nav a:hover { color: #fff; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #fff; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; color: #aaa; max-width: 600px; margin: 0 auto 30px; }
+        .badge-row { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+        .badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 16px 24px; text-align: center; }
+        .badge .icon { font-size: 1.5rem; margin-bottom: 6px; }
+        .badge .label { font-size: 0.85rem; color: #ccc; }
+        
+        /* Products */
+        .products { padding: 60px 0; }
+        .products h2 { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+        .card { border: 1px solid #e5e5e5; border-radius: 16px; overflow: hidden; transition: box-shadow 0.3s, transform 0.2s; }
+        .card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.1); transform: translateY(-4px); }
+        .card-img { width: 100%; height: 320px; object-fit: cover; background: #f5f5f5; }
+        .card-body { padding: 20px; }
+        .card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
+        .card-specs { font-size: 0.85rem; color: #666; margin-bottom: 12px; }
+        .card-price { font-size: 1.4rem; font-weight: 800; color: #000; }
+        .card-condition { display: inline-block; background: #ecfdf5; color: #059669; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-left: 8px; }
+        .card-features { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+        .feature-tag { font-size: 0.75rem; background: #f3f4f6; color: #374151; padding: 4px 10px; border-radius: 20px; }
+        .cta-btn { display: inline-block; background: #000; color: #fff; padding: 12px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 16px; transition: background 0.2s; }
+        .cta-btn:hover { background: #333; }
+        
+        /* Trust */
+        .trust { background: #f9fafb; padding: 60px 0; text-align: center; }
+        .trust h2 { font-size: 2rem; font-weight: 700; margin-bottom: 40px; }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+        .trust-item { padding: 24px; }
+        .trust-item .icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .trust-item h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .trust-item p { font-size: 0.9rem; color: #666; line-height: 1.6; }
+        
+        /* Contact */
+        .contact { padding: 60px 0; text-align: center; }
+        .contact h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .contact p { color: #666; margin-bottom: 24px; }
+        .contact-methods { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .contact-btn { display: inline-flex; align-items: center; gap: 8px; background: #000; color: #fff; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+        .contact-btn:hover { background: #333; }
+        .contact-btn.secondary { background: #f3f4f6; color: #000; }
+        .contact-btn.secondary:hover { background: #e5e7eb; }
+        
+        /* Footer */
+        footer { background: #000; color: #888; padding: 30px 0; text-align: center; font-size: 0.85rem; }
+        footer a { color: #aaa; text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .header-content { flex-direction: column; gap: 12px; }
+            nav a { margin-left: 16px; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Volt<span>Devices</span></div>
+                <nav>
+                    <a href="#devices">Devices</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Premium Phones. Honest Prices.</h1>
+            <p>Refurbished iPhones and Samsung devices — fully tested, IMEI verified, and ready to activate on any carrier.</p>
+            <div class="badge-row">
+                <div class="badge">
+                    <div class="icon">✅</div>
+                    <div class="label">IMEI Verified</div>
+                </div>
+                <div class="badge">
+                    <div class="icon">🔓</div>
+                    <div class="label">Fully Unlocked</div>
+                </div>
+                <div class="badge">
+                    <div class="icon">🔋</div>
+                    <div class="label">Battery Tested</div>
+                </div>
+                <div class="badge">
+                    <div class="icon">📦</div>
+                    <div class="label">Fast Shipping</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="devices">
+        <div class="container">
+            <h2>Available Now</h2>
+            <div class="grid">
+                <div class="card">
+                    <img class="card-img" src="photos/iphone15-128gb-black-back.jpg" alt="iPhone 15 128GB Black">
+                    <div class="card-body">
+                        <div class="card-title">iPhone 15</div>
+                        <div class="card-specs">128GB · Black · Unlocked</div>
+                        <div>
+                            <span class="card-price">$410</span>
+                            <span class="card-condition">Excellent</span>
+                        </div>
+                        <div class="card-features">
+                            <span class="feature-tag">✅ Clean IMEI</span>
+                            <span class="feature-tag">🔓 All Carriers</span>
+                            <span class="feature-tag">📸 Tested</span>
+                        </div>
+                        <a href="#contact" class="cta-btn">Inquire</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="photos/iphone16e-128gb-black-box.jpg" alt="iPhone 16e 128GB Black - New in Box">
+                    <div class="card-body">
+                        <div class="card-title">iPhone 16e</div>
+                        <div class="card-specs">128GB · Black · NEW IN BOX</div>
+                        <div>
+                            <span class="card-price">$420</span>
+                            <span class="card-condition">Brand New</span>
+                        </div>
+                        <div class="card-features">
+                            <span class="feature-tag">📦 Sealed Box</span>
+                            <span class="feature-tag">🔓 All Carriers</span>
+                            <span class="feature-tag">🛡️ Apple Warranty</span>
+                        </div>
+                        <a href="#contact" class="cta-btn">Inquire</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="photos/iphone14plus-128gb-blue-back.jpg" alt="iPhone 14 Plus 128GB Blue">
+                    <div class="card-body">
+                        <div class="card-title">iPhone 14 Plus</div>
+                        <div class="card-specs">128GB · Blue · Unlocked</div>
+                        <div>
+                            <span class="card-price">$320</span>
+                            <span class="card-condition">Good</span>
+                        </div>
+                        <div class="card-features">
+                            <span class="feature-tag">🔋 84% Battery</span>
+                            <span class="feature-tag">🔓 All Carriers</span>
+                            <span class="feature-tag">📸 Tested</span>
+                        </div>
+                        <a href="#contact" class="cta-btn">Inquire</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="photos/iphone12pro-box.jpg" alt="iPhone 12 Pro">
+                    <div class="card-body">
+                        <div class="card-title">iPhone 12 Pro</div>
+                        <div class="card-specs">Unlocked · Boxed</div>
+                        <div>
+                            <span class="card-price">$265</span>
+                            <span class="card-condition">Excellent</span>
+                        </div>
+                        <div class="card-features">
+                            <span class="feature-tag">✅ Clean IMEI</span>
+                            <span class="feature-tag">🔓 All Carriers</span>
+                            <span class="feature-tag">📦 With Box</span>
+                        </div>
+                        <a href="#contact" class="cta-btn">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust" id="why-us">
+        <div class="container">
+            <h2>Why Buy From Us</h2>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="icon">🔍</div>
+                    <h3>Every Device Inspected</h3>
+                    <p>Screen, cameras, speakers, buttons, charging port, Face ID — we test everything before listing.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="icon">🔓</div>
+                    <h3>Unlocked & Clean</h3>
+                    <p>All devices are carrier-unlocked with clean IMEI. No activation locks, no surprises.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="icon">📸</div>
+                    <h3>Real Photos</h3>
+                    <p>What you see is what you get. Every listing shows the actual device you'll receive.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="icon">🤝</div>
+                    <h3>3-Day Returns</h3>
+                    <p>Not satisfied? Return within 3 days for a full refund. We stand behind every sale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Ready to Buy?</h2>
+            <p>DM us or reach out through any of these channels. Fast replies guaranteed.</p>
+            <div class="contact-methods">
+                <a href="https://facebook.com/marketplace" class="contact-btn">📱 Facebook Marketplace</a>
+                <a href="https://swappa.com" class="contact-btn secondary">💻 Swappa Store</a>
+                <a href="mailto:maxgooose@gmail.com" class="contact-btn secondary">📧 Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 VoltDevices. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
