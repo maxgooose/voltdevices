@@ -250,14 +250,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   justify-content: center;
   align-items: center;
   animation: fadeIn 1s cubic-bezier(0.16,1,0.3,1) 0.3s both;
-  perspective: 900px;
+  perspective: 1200px;
+  overflow: visible;
 }
 .hero-carousel {
-  width: 340px;
-  height: 440px;
+  width: 180px;
+  height: 320px;
   position: relative;
   transform-style: preserve-3d;
-  animation: carouselSpin 18s linear infinite;
+  animation: carouselSpin 20s linear infinite;
 }
 @keyframes carouselSpin {
   from { transform: rotateY(0deg); }
@@ -266,17 +267,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-carousel:hover { animation-play-state: paused; }
 .hero-carousel-item {
   position: absolute;
-  width: 220px;
-  height: 380px;
-  left: 50%;
-  top: 50%;
-  margin-left: -110px;
-  margin-top: -190px;
-  border-radius: 22px;
+  width: 180px;
+  height: 320px;
+  left: 0;
+  top: 0;
+  border-radius: 18px;
   overflow: hidden;
-  backface-visibility: hidden;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-  transition: box-shadow 0.3s;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
 }
 .hero-carousel-item img {
   width: 100%;
@@ -289,8 +286,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-actions { justify-content: center; }
   .hero-trust { justify-content: center; }
   .hero-visual { order: -1; }
-  .hero-carousel { width: 260px; height: 360px; }
-  .hero-carousel-item { width: 170px; height: 300px; margin-left: -85px; margin-top: -150px; }
+  .hero-carousel { width: 140px; height: 250px; }
+  .hero-carousel-item { width: 140px; height: 250px; }
 }
 @media (max-width: 480px) {
   .hero { padding: 130px 0 80px; }
@@ -1159,7 +1156,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   const items = document.querySelectorAll('.hero-carousel-item');
   const n = items.length;
   const angleStep = 360 / n;
-  const radius = 280;
+  // radius = half-item-width / tan(PI/n) + padding
+  const radius = Math.round((90 / Math.tan(Math.PI / n)) + 40);
   items.forEach((item, i) => {
     item.style.transform = `rotateY(${i * angleStep}deg) translateZ(${radius}px)`;
   });
