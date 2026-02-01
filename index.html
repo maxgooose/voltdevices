@@ -248,13 +248,40 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-visual {
   display: flex;
   justify-content: center;
+  align-items: center;
   animation: fadeIn 1s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+  perspective: 900px;
 }
-.hero-phone-float {
-  width: 300px;
-  max-width: 100%;
-  border-radius: 24px;
-  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.1));
+.hero-carousel {
+  width: 340px;
+  height: 440px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: carouselSpin 18s linear infinite;
+}
+@keyframes carouselSpin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+.hero-carousel:hover { animation-play-state: paused; }
+.hero-carousel-item {
+  position: absolute;
+  width: 220px;
+  height: 380px;
+  left: 50%;
+  top: 50%;
+  margin-left: -110px;
+  margin-top: -190px;
+  border-radius: 22px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  transition: box-shadow 0.3s;
+}
+.hero-carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media (max-width: 968px) {
   .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 48px; }
@@ -262,7 +289,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-actions { justify-content: center; }
   .hero-trust { justify-content: center; }
   .hero-visual { order: -1; }
-  .hero-phone-float { width: 200px; }
+  .hero-carousel { width: 260px; height: 360px; }
+  .hero-carousel-item { width: 170px; height: 300px; margin-left: -85px; margin-top: -150px; }
 }
 @media (max-width: 480px) {
   .hero { padding: 130px 0 80px; }
@@ -809,7 +837,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
       </div>
     </div>
     <div class="hero-visual">
-      <img src="photos/iphone-front-dark.jpg" alt="iPhone 15 Pro Black Titanium" class="hero-phone-float" loading="eager" width="300" height="600">
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hero-carousel-item"><img src="photos/iphone-front-dark.jpg" alt="iPhone 15 Pro Black Titanium" loading="eager"></div>
+        <div class="hero-carousel-item"><img src="photos/iphone15-128gb-black-front.jpg" alt="iPhone 15 128GB Black" loading="eager"></div>
+        <div class="hero-carousel-item"><img src="photos/iphone14plus-128gb-blue-front.jpg" alt="iPhone 14 Plus Blue" loading="eager"></div>
+        <div class="hero-carousel-item"><img src="photos/iphone14plus-128gb-blue-back.jpg" alt="iPhone 14 Plus Blue Back" loading="eager"></div>
+        <div class="hero-carousel-item"><img src="photos/iphone15-128gb-black-back.jpg" alt="iPhone 15 Black Back" loading="eager"></div>
+        <div class="hero-carousel-item"><img src="photos/iphone16e-128gb-black-box.jpg" alt="iPhone 16e Box" loading="eager"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1119,6 +1154,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 <!-- ═══ SCRIPTS ═══ -->
 <script>
+/* ─── HERO CAROUSEL 3D SETUP ─── */
+(function() {
+  const items = document.querySelectorAll('.hero-carousel-item');
+  const n = items.length;
+  const angleStep = 360 / n;
+  const radius = 280;
+  items.forEach((item, i) => {
+    item.style.transform = `rotateY(${i * angleStep}deg) translateZ(${radius}px)`;
+  });
+})();
+
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
 
