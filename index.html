@@ -250,39 +250,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   justify-content: center;
   align-items: center;
   animation: fadeIn 1s cubic-bezier(0.16,1,0.3,1) 0.3s both;
-  overflow: hidden;
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  position: relative;
+  perspective: 1200px;
+  overflow: visible;
 }
-/* Fade edges */
-.hero-visual::before,
-.hero-visual::after {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0;
-  width: 60px;
-  z-index: 2;
-  pointer-events: none;
-}
-.hero-visual::before { left: 0; background: linear-gradient(to right, #fafafa, transparent); }
-.hero-visual::after { right: 0; background: linear-gradient(to left, #fafafa, transparent); }
 .hero-carousel {
-  display: flex;
-  gap: 16px;
-  animation: scrollCarousel 20s linear infinite;
-  width: max-content;
+  width: 140px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: carouselSpin 20s linear infinite;
 }
-@keyframes scrollCarousel {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes carouselSpin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
 }
 .hero-carousel:hover { animation-play-state: paused; }
 .hero-carousel-item {
-  flex-shrink: 0;
+  position: absolute;
   width: 140px;
   height: 200px;
+  left: 0;
+  top: 0;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
@@ -297,7 +285,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-sub { margin: 0 auto 40px; }
   .hero-actions { justify-content: center; }
   .hero-trust { justify-content: center; }
-  .hero-visual { order: -1; max-width: 100%; }
+  .hero-visual { order: -1; }
+  .hero-carousel { width: 110px; height: 160px; }
   .hero-carousel-item { width: 110px; height: 160px; }
 }
 @media (max-width: 480px) {
@@ -846,20 +835,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     </div>
     <div class="hero-visual">
       <div class="hero-carousel" id="heroCarousel">
-        <!-- Original set -->
         <div class="hero-carousel-item"><img src="photos/iphone-front-dark.jpg" alt="iPhone 15 Pro" loading="eager"></div>
         <div class="hero-carousel-item"><img src="photos/iphone15-128gb-black-front.jpg" alt="iPhone 15 Black" loading="eager"></div>
         <div class="hero-carousel-item"><img src="photos/iphone14plus-128gb-blue-front.jpg" alt="iPhone 14 Plus Blue" loading="eager"></div>
         <div class="hero-carousel-item"><img src="photos/iphone14plus-128gb-blue-back.jpg" alt="iPhone 14 Plus Back" loading="eager"></div>
         <div class="hero-carousel-item"><img src="photos/iphone15-128gb-black-back.jpg" alt="iPhone 15 Back" loading="eager"></div>
         <div class="hero-carousel-item"><img src="photos/iphone16e-128gb-black-box.jpg" alt="iPhone 16e Box" loading="eager"></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="hero-carousel-item"><img src="photos/iphone-front-dark.jpg" alt="iPhone 15 Pro" loading="lazy"></div>
-        <div class="hero-carousel-item"><img src="photos/iphone15-128gb-black-front.jpg" alt="iPhone 15 Black" loading="lazy"></div>
-        <div class="hero-carousel-item"><img src="photos/iphone14plus-128gb-blue-front.jpg" alt="iPhone 14 Plus Blue" loading="lazy"></div>
-        <div class="hero-carousel-item"><img src="photos/iphone14plus-128gb-blue-back.jpg" alt="iPhone 14 Plus Back" loading="lazy"></div>
-        <div class="hero-carousel-item"><img src="photos/iphone15-128gb-black-back.jpg" alt="iPhone 15 Back" loading="lazy"></div>
-        <div class="hero-carousel-item"><img src="photos/iphone16e-128gb-black-box.jpg" alt="iPhone 16e Box" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -1170,6 +1151,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 <!-- ═══ SCRIPTS ═══ -->
 <script>
+/* ─── HERO CAROUSEL 3D ─── */
+(function() {
+  const items = document.querySelectorAll('.hero-carousel-item');
+  const n = items.length;
+  const angle = 360 / n;
+  const radius = Math.round((70 / Math.tan(Math.PI / n)) + 30);
+  items.forEach((item, i) => {
+    item.style.transform = `rotateY(${i * angle}deg) translateZ(${radius}px)`;
+  });
+})();
+
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
 
